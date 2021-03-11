@@ -13,7 +13,6 @@ int opcao,opcao2;
 int i = 0;
 int a = 1;
 char edicao[50],excluir[50],busca[50];
-int zero;
 
 main()
 {
@@ -28,7 +27,7 @@ while (opcao != 0)
 if (i <= 9)
 {
 
-//fflush(stdin);
+fflush(stdin);
 
 system("cls");
 
@@ -50,18 +49,14 @@ switch (opcao)
 {
 case 1:
 
- //fflush(stdin);
+ fflush(stdin);
 
     if (i<=9)
     {
     
-    if (zero == 0)
-    {
     for(i=i; i<a;i++)
     {
     
-    
-    if(zero == 0)
     printf("Digite o nome:");
     scanf("%s",c[i].nome);
     printf("Digite o numero com o DDD:");
@@ -72,23 +67,6 @@ case 1:
     scanf("%s",c[i].datan);
     printf("Obs:");
     scanf("%s",c[i].obs);
-    }
-
-    }
-    else
-    {
-   
-    printf("Digite o nome:");
-    scanf("%s",c[zero].nome);
-    printf("Digite o numero com o DDD:");
-    scanf("%d",&c[zero].numero);
-    printf("Email:");
-    scanf("%s",c[zero].email);
-    printf("Data de nascimento:");
-    scanf("%s",c[zero].datan);
-    printf("Obs:");
-    scanf("%s",c[zero].obs);  
-   
     }
     
     printf("Contato adicionado com sucesso!\n");
