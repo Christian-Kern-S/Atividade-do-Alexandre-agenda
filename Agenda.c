@@ -72,12 +72,6 @@ case 1:
     printf("Contato adicionado com sucesso!\n");
 
     a = a + 1;
-    }
-    
-    else
-    {
-    printf("Ja foram adicionados o maximo de contatos.");
-    }
     
     system("pause");
 
@@ -100,7 +94,52 @@ case 1:
     system("pause");
 
     break;
+
+    case 5:
+
+    //fflush(stdin);
+    
+    printf("Digite o nome do contato:");
+    scanf("%s",busca);
+
+    a = a - 1; 
+
+    for(i=0; i<a; i++) 
+   {
+      system("cls");
+
+      if (strcmp (busca,c[i].nome) == 0)
+      {
+ 
+       printf("Contato %i:\n", i+1);
+       printf("Nome: %s\n",c[i].nome);
+       printf("Numero: %d\n",c[i].numero);
+       printf("Email: %s",c[i].email);
+       printf("Data de nascimento: %s",c[i].datan);
+       printf("Obs: %s",c[i].obs);
+
+      }
+      
+    }
+    break;
+
+    case 0: 
+    break;
+
+    default:
+       printf("Voce deve escolher uma das 6 opcoes");
+    break;
+    }
 }
+
 }
+
+else
+{
+    printf("Voce ja adicionou o maximo de contatos");
 }
+
+}
+
+
 }
