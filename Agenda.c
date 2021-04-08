@@ -53,7 +53,7 @@ main()
             case 1: // Função cadastro
 
 
-                if (i<=1)
+                if (i<=9)
                 {
 
                 
@@ -74,6 +74,7 @@ main()
                         printf("Contato adicionado com sucesso!\n");
 
                         a++;
+                        i++;
                         
                         system("pause");
                 }
@@ -98,7 +99,7 @@ main()
                     {
                         system("cls");
 
-                        if (strcmp (edicao,c[i].nome) == 0) 
+                        if(strcmp (edicao,c[i].nome) == 0) 
                         {
                             printf("O que deseja mudar?");
                             printf("\n 1 - Nome");
@@ -158,16 +159,33 @@ main()
 
                         }
 
-                        else
+                          else
                         {
-                            printf("O nome nao existe ou está incorreto.\n");
+                            printf("O nome nao existe ou esta incorreto.\n");
                             system("pause");
-                        }
+                        }  
                         
  
                     }
-                            
+                        
                         break;
+
+                case 3: //Função Excluir
+                
+                    printf("Digite o numero do contato:");
+                    scanf("%s",excluir);
+
+                for(i=0;i<a;i++)
+                {
+                    if (strcmp (excluir,c[i].nome) == 0)
+                    {
+                        
+                        for(i; i<=a; i++)
+                        {
+                             a++;
+                        } 
+                    }
+                }
 
                 case 4: // Função listar
 
@@ -176,8 +194,11 @@ main()
                 for(i=0; i<a; i++)
                 {
 
-                    printf("Contato: %i ", i+1);
+                    printf("Contato %i\n ", i+1);
                     printf("Nome: %s\n",c[i].nome);
+                    printf(" \n");
+                    printf("_______________________\n");
+                    
 
                 }
 
@@ -191,13 +212,12 @@ main()
                     printf("Digite o nome do contato:");
                     scanf("%s",busca); 
 
-                for(i=0; i<a; i++) 
+                for(i=0; i<=a; i++) 
                 {
-                    system("cls");
 
                     if (strcmp (busca,c[i].nome) == 0)
                     {
-                            printf("Contato: %i\n", i+1);
+                            printf("Contato %i\n", i+1);
                             printf("Nome: %s\n",c[i].nome);
                             printf("Numero: %d\n",c[i].numero);
                             printf("Email: %s\n",c[i].email);
@@ -205,11 +225,10 @@ main()
                             printf("Obs: %s\n",c[i].obs);
 
                     }
+            
                 }
-                
                     system("pause");
-
-                
+                    
                     break;
 
                 case 0: // funçao sair 
